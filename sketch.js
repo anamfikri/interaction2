@@ -13,6 +13,11 @@ function preload() {
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
+  let clearBtn = createButton("clear");
+  clearBtn.position(10, 10);
+  clearBtn.mousePressed(() => {
+    rectangles = [];
+  });
 }
 
 function windowResized() {
@@ -22,7 +27,7 @@ function windowResized() {
 function draw() {
   clear();
 
-  //placed rectangles
+  //rectangles
   for (let rect of rectangles) {
     drawPattern(rect.x, rect.y, rect.w, rect.h, rect.pattern);
   }
@@ -85,13 +90,4 @@ function drawPattern(x, y, w, h, img) {
       image(img, i, j, gridSize, gridSize);
     }
   }
-}
-
-function setup() {
-  createCanvas(800, 800);
-  let clearBtn = createButton("clear");
-  clearBtn.position(10, 10);
-  clearBtn.mousePressed(() => {
-    rectangles = [];
-  });
 }
