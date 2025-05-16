@@ -14,7 +14,7 @@ function preload() {
 function setup() {
   createCanvas(windowWidth, windowHeight);
   let clearBtn = createButton("clear");
-  clearBtn.position(10, 10);
+  clearBtn.position(54, 10);
   clearBtn.mousePressed(() => {
     rectangles = [];
   });
