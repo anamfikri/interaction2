@@ -22,12 +22,12 @@ function windowResized() {
 function draw() {
   clear();
 
-  // Draw placed rectangles
+  //placed rectangles
   for (let rect of rectangles) {
     drawPattern(rect.x, rect.y, rect.w, rect.h, rect.pattern);
   }
 
-  // Live preview while dragging
+  //live preview
   if (isDragging) {
     let snappedX = snapToGrid(mouseX);
     let snappedY = snapToGrid(mouseY);
