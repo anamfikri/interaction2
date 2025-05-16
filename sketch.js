@@ -12,8 +12,11 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(800, 800);
-  noSmooth();
+  createCanvas(windowWidth, windowHeight);
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
 
 function draw() {
