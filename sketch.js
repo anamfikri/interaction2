@@ -13,11 +13,6 @@ function preload() {
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  let clearBtn = createButton("clear");
-  clearBtn.position(10, 54);
-  clearBtn.mousePressed(() => {
-    rectangles = [];
-  });
 }
 
 function windowResized() {
@@ -27,12 +22,10 @@ function windowResized() {
 function draw() {
   clear();
 
-  //rectangles
   for (let rect of rectangles) {
     drawPattern(rect.x, rect.y, rect.w, rect.h, rect.pattern);
   }
 
-  //live preview
   if (isDragging) {
     let snappedX = snapToGrid(mouseX);
     let snappedY = snapToGrid(mouseY);
