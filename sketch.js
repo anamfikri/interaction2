@@ -1,4 +1,4 @@
-let gridSize = 64;
+let gridSize = 25;
 let rectangles = [];
 let tileSets = [];
 let patternIndex = 0;
