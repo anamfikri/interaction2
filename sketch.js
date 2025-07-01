@@ -61,7 +61,7 @@ function drawLivePreview() {
   let h = abs(y2 - y1) + gridSize;
   if (w > gridSize && h > gridSize) {
     push();
-    tint(255, 120);
+    tint(255, 255);
     drawTiledRect({ x, y, w, h, tileSet: tileSets[patternIndex] });
     pop();
   }
